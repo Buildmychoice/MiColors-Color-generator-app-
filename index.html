@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color & Design System Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/visualizer-v2.css?v=5">
+</head>
+
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="header-left">
+                <h1>MiColors</h1>
+            </div>
+            <div class="header-right">
+                <button id="viz-btn" class="btn btn-secondary btn-sm"
+                    style="margin-right: 12px; display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem;">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path
+                            d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                    </svg>
+                    <span class="text-label">Visualize</span>
+                </button>
+                <div class="control-group compact">
+                    <select id="harmony-select">
+                        <option value="random" selected>Random</option>
+                        <option value="monochromatic">Monochromatic</option>
+                        <option value="analogous">Analogous</option>
+                        <option value="complementary">Complementary</option>
+                        <option value="split-complementary">Split Complementary</option>
+                        <option value="triadic">Triadic</option>
+                    </select>
+                    <select id="format-select">
+                        <option value="hex" selected>HEX</option>
+                        <option value="rgb">RGB</option>
+                        <option value="hsl">HSL</option>
+                        <option value="hsb">HSB</option>
+                        <option value="cmyk">CMYK</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main id="palette-container" class="vertical-palette">
+            <!-- Columns injected here -->
+        </main>
+
+        <div class="bottom-controls">
+            <button id="viz-btn-mobile" class="btn btn-secondary btn-viz-mobile">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                    <path
+                        d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+                </svg>
+            </button>
+            <button id="randomize-btn" class="btn btn-primary btn-floating">
+                <span class="icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path
+                            d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" />
+                    </svg>
+                </span>
+                Generate Palette
+            </button>
+        </div>
+
+        <!-- Visualization Sidebar -->
+        <div id="viz-overlay" class="viz-overlay"></div>
+        <aside id="viz-panel" class="viz-panel">
+            <div class="viz-header">
+                <h2>Visualize Colors</h2>
+                <button id="viz-close" class="viz-close">×</button>
+            </div>
+            <div class="viz-content">
+
+                <!-- Web Design -->
+                <div class="viz-card">
+                    <div class="viz-card-header">Web Design</div>
+                    <div class="viz-preview web-preview">
+                        <div class="web-nav">
+                            <div class="web-logo"></div>
+                            <div class="web-links">
+                                <span class="web-link"></span><span class="web-link"></span>
+                            </div>
+                        </div>
+                        <div class="web-content">
+                            <h3 class="web-headline">Make It Pop.</h3>
+                            <p class="web-sub">Color schemes that speak to your audience.</p>
+                            <div class="web-btn">Start Creating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branding -->
+                <div class="viz-card">
+                    <div class="viz-card-header">Branding</div>
+                    <div class="viz-preview branding-preview">
+                        <div class="biz-group">
+                            <div class="biz-card-1"></div>
+                            <div class="biz-card-2">
+                                <div class="biz-logo-mark"></div>
+                                <div class="biz-name">JOHN DOE</div>
+                                <div class="biz-title">Creative Director</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="viz-card">
+                    <div class="viz-card-header">Typography</div>
+                    <div class="viz-preview typo-preview">
+                        <div class="typo-h1">Design is <span class="typo-hl">Thinking</span></div>
+                        <div class="typo-p">Made visual. Colors bring life to structure and meaning to form.</div>
+                    </div>
+                </div>
+
+                <!-- Pattern -->
+                <div class="viz-card">
+                    <div class="viz-card-header">Pattern</div>
+                    <div class="viz-preview pattern-preview"></div>
+                </div>
+
+                <!-- App Design -->
+                <div class="viz-card">
+                    <div class="viz-card-header">App Design</div>
+                    <div class="viz-preview app-preview">
+                        <div class="mobile-mock">
+                            <div class="app-header-bar">
+                                <div class="app-avatar"></div>
+                                <div class="app-title"></div>
+                            </div>
+                            <div class="app-card">
+                                <div class="app-img"></div>
+                                <div class="app-line"></div>
+                            </div>
+                            <div class="app-btn">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Illustration -->
+                <div class="viz-card">
+                    <div class="viz-card-header">Illustration</div>
+                    <div class="viz-preview illu-preview">
+                        <div class="shape-1"></div>
+                        <div class="shape-2"></div>
+                        <div class="shape-3"></div>
+                        <div class="shape-4"></div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <!-- Hidden/Overlay controls for JS state syncing -->
+        <div class="hidden">
+            <input type="color" id="color-picker" value="#3b82f6">
+            <input type="text" id="color-input" value="#3b82f6">
+        </div>
+
+        <div id="toast" class="toast hidden">Copied to clipboard!</div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
