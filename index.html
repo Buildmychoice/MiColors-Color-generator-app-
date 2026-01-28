@@ -83,16 +83,75 @@
                 <div class="viz-card">
                     <div class="viz-card-header">Web Design</div>
                     <div class="viz-preview web-preview">
-                        <div class="web-nav">
-                            <div class="web-logo"></div>
-                            <div class="web-links">
-                                <span class="web-link"></span><span class="web-link"></span>
+                        <header class="web-hero-header">
+                            <div class="web-hero-logo">
+                                <div class="logo-circle"></div>
+                                <span class="logo-text">Color <span>Generator</span></span>
+                            </div>
+                            <div class="web-hero-nav">
+                                <span class="nav-link">Export CSS</span>
+                                <button class="nav-btn">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                        <path
+                                            d="M16 1h-8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2zm0 16h-8v-14h8v14zM4 5v14c0 1.1.9 2 2 2h10v2H6c-1.1 0-2-.9-2-2V5h2z" />
+                                    </svg>
+                                    Export CSS
+                                </button>
+                                <div class="theme-toggle-icon">☀️</div>
+                            </div>
+                        </header>
+
+                        <div class="web-hero-main">
+                            <div class="web-hero-text">
+                                <h1 class="hero-title">Generate Professional <span class="hl-1">Color</span> <span
+                                        class="hl-2">Palettes</span> for Your <span class="hl-3">Design</span> System
+                                </h1>
+                                <p class="hero-desc">Create harmonious color palettes for your UI, ensuring
+                                    accessibility and visual consistency. Generate, customize, and export color systems
+                                    for your projects. *</p>
+                                <div class="hero-actions">
+                                    <button class="btn-primary-hero">Generate Palette</button>
+                                    <button class="btn-secondary-hero">Learn More</button>
+                                </div>
+                            </div>
+                            <div class="web-hero-illu">
+                                <div class="illu-container">
+                                    <div class="shape shape-rect-top"></div>
+                                    <div class="shape shape-circle-top"></div>
+                                    <div class="shape shape-diamond"></div>
+                                    <div class="shape shape-rect-left"></div>
+                                    <div class="shape shape-circle-main"></div>
+                                    <div class="shape shape-tri"></div>
+                                    <div class="shape shape-pill"></div>
+                                    <div class="shape shape-semi-top"></div>
+                                    <div class="shape shape-semi-bottom"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="web-content">
-                            <h3 class="web-headline">Make It Pop.</h3>
-                            <p class="web-sub">Color schemes that speak to your audience.</p>
-                            <div class="web-btn">Start Creating</div>
+
+                        <div class="web-hero-features">
+                            <div class="feature-card">
+                                <div class="feature-icon harmony-icon">🎨</div>
+                                <div class="feature-info">
+                                    <h4>Harmony Types</h4>
+                                    <p>Create monochromatic, complementary, triadic, and more harmonious palettes.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon lock-icon">🔒</div>
+                                <div class="feature-info">
+                                    <h4>Lock Colors</h4>
+                                    <p>Lock specific colors to keep them fixed while generating new palettes.</p>
+                                </div>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon contrast-icon">👁️</div>
+                                <div class="feature-info">
+                                    <h4>Contrast Check</h4>
+                                    <p>Check contrast ratios for accessibility to ensure your text is always readable.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -101,12 +160,90 @@
                 <div class="viz-card">
                     <div class="viz-card-header">Branding</div>
                     <div class="viz-preview branding-preview">
-                        <div class="biz-group">
-                            <div class="biz-card-1"></div>
-                            <div class="biz-card-2">
-                                <div class="biz-logo-mark"></div>
-                                <div class="biz-name">JOHN DOE</div>
-                                <div class="biz-title">Creative Director</div>
+                        <div class="brand-assets-grid">
+                            <!-- Letterhead -->
+                            <div class="brand-asset stationery">
+                                <div class="asset-label">Letterhead</div>
+                                <div class="letterhead">
+                                    <div class="lh-header">
+                                        <div class="lh-logo"></div>
+                                        <div class="lh-brand-name">BrandName</div>
+                                    </div>
+                                    <div class="lh-body">
+                                        <div class="lh-line"></div>
+                                        <div class="lh-line"></div>
+                                        <div class="lh-line short"></div>
+                                    </div>
+                                    <div class="lh-footer">
+                                        <div class="lh-wave-pattern"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Notebook -->
+                            <div class="brand-asset notebooks">
+                                <div class="asset-label">Notebook</div>
+                                <div class="notebook">
+                                    <div class="nb-rings"></div>
+                                    <div class="nb-cover">
+                                        <div class="nb-logo"></div>
+                                        <div class="nb-brand-name">BrandName</div>
+                                        <div class="nb-wave-pattern"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Business Cards -->
+                            <div class="brand-asset cards">
+                                <div class="asset-label">Business Cards</div>
+                                <div class="biz-cards-stack">
+                                    <div class="biz-card front">
+                                        <div class="card-logo"></div>
+                                        <div class="card-name">BrandName</div>
+                                        <div class="card-pattern"></div>
+                                    </div>
+                                    <div class="biz-card back">
+                                        <div class="card-logo-sm"></div>
+                                        <div class="card-brand">BrandName</div>
+                                        <div class="card-info">
+                                            <div class="info-line">Arthur Powell</div>
+                                            <div class="info-line sm">Art Director</div>
+                                        </div>
+                                        <div class="card-wave-sm"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Mug -->
+                            <div class="brand-asset merch">
+                                <div class="asset-label">Merchandise</div>
+                                <div class="mug-container">
+                                    <div class="mug">
+                                        <div class="mug-handle"></div>
+                                        <div class="mug-body">
+                                            <div class="mug-logo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Brand Marks -->
+                            <div class="brand-asset marks">
+                                <div class="asset-label">Brand Marks</div>
+                                <div class="marks-row">
+                                    <div class="brand-mark-box dark">
+                                        <div class="mark-logo"></div>
+                                        <div class="mark-name">BrandName</div>
+                                    </div>
+                                    <div class="brand-mark-box light">
+                                        <div class="mark-logo"></div>
+                                        <div class="mark-name">BrandName</div>
+                                    </div>
+                                    <div class="brand-mark-box accent">
+                                        <div class="mark-logo"></div>
+                                        <div class="mark-name">BrandName</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -116,8 +253,7 @@
                 <div class="viz-card">
                     <div class="viz-card-header">Typography</div>
                     <div class="viz-preview typo-preview">
-                        <div class="typo-h1">Design is <span class="typo-hl">Thinking</span></div>
-                        <div class="typo-p">Made visual. Colors bring life to structure and meaning to form.</div>
+                        <img src="assets/typography-winner.png" alt="Typography Preview" class="typo-img">
                     </div>
                 </div>
 
